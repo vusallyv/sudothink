@@ -9,10 +9,10 @@ description = "An intelligent terminal assistant that uses OpenAI's GPT-4 to hel
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Vusal Abdullayev", email = "abdulla.vusal.3@gmail.com"}
 ]
 maintainers = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Vusal Abdullayev", email = "abdulla.vusal.3@gmail.com"}
 ]
 keywords = ["terminal", "ai", "openai", "shell", "automation", "productivity"]
 classifiers = [

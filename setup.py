@@ -19,8 +19,8 @@ def read_requirements():
 setup(
     name="sudothink",
     version="1.0.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Vusal Abdullayev",
+    author_email="abdulla.vusal.3@gmail.com",
     description="An intelligent terminal assistant that uses OpenAI's GPT-4 to help with complex shell tasks",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
