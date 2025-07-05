@@ -65,12 +65,12 @@ ai-chat
 
 **One-liner installation:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/sudothink/main/install-oneline.sh | bash
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install-oneline.sh | bash
 ```
 
 **Manual installation:**
 ```bash
-git clone https://github.com/yourusername/sudothink.git
+git clone https://github.com/vusallyv/sudothink.git
 cd sudothink
 chmod +x install.sh
 ./install.sh
@@ -86,7 +86,7 @@ pip install sudothink
 #### Via Homebrew (macOS)
 ```bash
 # Add to your tap first
-brew tap yourusername/sudothink
+brew tap vusallyv/sudothink
 brew install sudothink
 ```
 

@@ -15,7 +15,7 @@ This guide covers all the different ways to install SudoThink on various platfor
 The fastest way to get started:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/sudothink/main/install-oneline.sh | bash
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install-oneline.sh | bash
 ```
 
 This will:
@@ -30,7 +30,7 @@ If you prefer to install manually:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/sudothink.git
+git clone https://github.com/vusallyv/sudothink.git
 cd sudothink
 
 # Make installation script executable
@@ -52,7 +52,7 @@ Then manually set up shell integration:
 
 ```bash
 # Download shell script
-curl -fsSL https://raw.githubusercontent.com/yourusername/terminAI/main/ai.zsh -o ~/.terminai.zsh
+curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/ai.zsh -o ~/.terminai.zsh
 
 # Add to your shell configuration
 echo 'source ~/.terminai.zsh' >> ~/.zshrc
@@ -62,7 +62,7 @@ echo 'source ~/.terminai.zsh' >> ~/.zshrc
 
 ```bash
 # Add the tap
-brew tap yourusername/sudothink
+brew tap vusallyv/sudothink
 
 # Install SudoThink
 brew install sudothink
@@ -74,7 +74,7 @@ For developers who want to contribute:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/sudothink.git
+git clone https://github.com/vusallyv/sudothink.git
 cd sudothink
 
 # Install in development mode
@@ -99,7 +99,7 @@ chmod +x install.sh
 
 2. **Install TerminAI**:
    ```bash
-   brew install yourusername/terminai/terminai
+   brew install vusallyv/terminai/terminai
    ```
 
 ### Linux (Ubuntu/Debian)
@@ -112,7 +112,7 @@ chmod +x install.sh
 
 2. **Install TerminAI**:
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/yourusername/terminAI/main/install-oneline.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/install-oneline.sh | bash
    ```
 
 ### Linux (CentOS/RHEL/Fedora)
@@ -128,7 +128,7 @@ chmod +x install.sh
 
 2. **Install TerminAI**:
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/yourusername/terminAI/main/install-oneline.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/install-oneline.sh | bash
    ```
 
 ### Windows (WSL)
@@ -140,7 +140,7 @@ chmod +x install.sh
 
 2. **Install TerminAI in WSL**:
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/yourusername/terminAI/main/install-oneline.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/install-oneline.sh | bash
    ```
 
 ## Configuration
@@ -260,8 +260,8 @@ brew upgrade terminai
 If you encounter any issues:
 
 1. Check the [troubleshooting section](#troubleshooting)
-2. Search [existing issues](https://github.com/yourusername/terminAI/issues)
-3. Create a [new issue](https://github.com/yourusername/terminAI/issues/new)
+2. Search [existing issues](https://github.com/vusallyv/terminAI/issues)
+3. Create a [new issue](https://github.com/vusallyv/terminAI/issues/new)
 
 ## Contributing
 

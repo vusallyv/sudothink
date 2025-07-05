@@ -44,10 +44,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/sudothink"
-Documentation = "https://github.com/yourusername/sudothink#readme"
-Repository = "https://github.com/yourusername/sudothink"
-"Bug Tracker" = "https://github.com/yourusername/sudothink/issues"
+Homepage = "https://github.com/vusallyv/sudothink"
+Documentation = "https://github.com/vusallyv/sudothink#readme"
+Repository = "https://github.com/vusallyv/sudothink"
+"Bug Tracker" = "https://github.com/vusallyv/sudothink/issues"
 
 [project.scripts]
 terminai = "terminai.cli:main"

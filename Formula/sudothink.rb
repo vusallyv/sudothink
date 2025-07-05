@@ -1,10 +1,10 @@
 class Sudothink < Formula
   desc "An intelligent terminal assistant that uses OpenAI's GPT-4"
-  homepage "https://github.com/yourusername/sudothink"
-  url "https://github.com/yourusername/sudothink/archive/refs/tags/v1.0.0.tar.gz"
+  homepage "https://github.com/vusallyv/sudothink"
+  url "https://github.com/vusallyv/sudothink/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "YOUR_SHA256_HERE"
   license "MIT"
-  head "https://github.com/yourusername/sudothink.git", branch: "main"
+  head "https://github.com/vusallyv/sudothink.git", branch: "main"
 
   depends_on "python@3.9"
 

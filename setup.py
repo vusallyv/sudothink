@@ -24,7 +24,7 @@ setup(
     description="An intelligent terminal assistant that uses OpenAI's GPT-4 to help with complex shell tasks",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/sudothink",
+    url="https://github.com/vusallyv/sudothink",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -52,8 +52,8 @@ setup(
     zip_safe=False,
     keywords="terminal, ai, openai, shell, automation, productivity",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/sudothink/issues",
-        "Source": "https://github.com/yourusername/sudothink",
-        "Documentation": "https://github.com/yourusername/sudothink#readme",
+        "Bug Reports": "https://github.com/vusallyv/sudothink/issues",
+        "Source": "https://github.com/vusallyv/sudothink",
+        "Documentation": "https://github.com/vusallyv/sudothink#readme",
     },
 ) 

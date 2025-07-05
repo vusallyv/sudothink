@@ -1,6 +1,6 @@
 #!/bin/bash
 # One-liner installation script for SudoThink
-# Usage: curl -fsSL https://raw.githubusercontent.com/yourusername/sudothink/main/install-oneline.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install-oneline.sh | bash
 
 set -e
 
@@ -11,7 +11,7 @@ TEMP_DIR=$(mktemp -d)
 cd "$TEMP_DIR"
 
 # Download the installation script
-curl -fsSL https://raw.githubusercontent.com/yourusername/sudothink/main/install.sh -o install.sh
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install.sh -o install.sh
 chmod +x install.sh
 
 # Run the installation

@@ -216,7 +216,7 @@ create_update_script() {
 set -e
 
 INSTALL_DIR="$HOME/.sudothink"
-REPO_URL="https://github.com/yourusername/sudothink.git"
+REPO_URL="https://github.com/vusallyv/sudothink.git"
 TEMP_DIR="/tmp/sudothink_update"
 
 echo "Updating SudoThink..."
