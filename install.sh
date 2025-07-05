@@ -214,26 +214,21 @@ create_update_script() {
 set -e
 
 INSTALL_DIR="$HOME/.sudothink"
-REPO_URL="https://github.com/vusallyv/sudothink.git"
-TEMP_DIR="/tmp/sudothink_update"
 
 echo "Updating SudoThink..."
 
-# Create temporary directory
-mkdir -p "$TEMP_DIR"
-cd "$TEMP_DIR"
+# Download updated files directly from repository
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/ai.py -o "$INSTALL_DIR/ai.py"
+chmod +x "$INSTALL_DIR/ai.py"
 
-# Clone the latest version
-git clone "$REPO_URL" .
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/ai.zsh -o "$INSTALL_DIR/ai.zsh"
 
-# Copy updated files
-cp ai.py "$INSTALL_DIR/"
-cp ai.zsh "$INSTALL_DIR/"
-cp README.md "$INSTALL_DIR/"
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/README.md -o "$INSTALL_DIR/README.md"
 
-# Clean up
-cd /
-rm -rf "$TEMP_DIR"
+# Download LICENSE if it exists
+if curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/LICENSE -o "$INSTALL_DIR/LICENSE" 2>/dev/null; then
+    echo "LICENSE updated"
+fi
 
 echo "SudoThink updated successfully!"
 echo "Please restart your shell or run 'source ~/.zshrc' to apply changes."
