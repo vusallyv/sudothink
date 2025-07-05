@@ -11,7 +11,7 @@ TEMP_DIR=$(mktemp -d)
 cd "$TEMP_DIR"
 
 # Download the installation script
-curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/refs/heads/master/install-oneline.sh -o install.sh
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/refs/heads/master/install.sh -o install.sh
 chmod +x install.sh
 
 # Run the installation
