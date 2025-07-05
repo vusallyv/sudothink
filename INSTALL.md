@@ -62,7 +62,7 @@ echo 'source ~/.sudothink.zsh' >> ~/.zshrc
 
 ```bash
 # Add the tap
-brew tap vusallyv/sudothink
+brew tap yourusername/sudothink
 
 # Install SudoThink
 brew install sudothink

@@ -4,7 +4,7 @@ class Sudothink < Formula
   url "https://github.com/vusallyv/sudothink/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "YOUR_SHA256_HERE"
   license "MIT"
-  head "https://github.com/vusallyv/sudothink.git", branch: "main"
+  head "https://github.com/vusallyv/sudothink.git", branch: "master"
 
   depends_on "python@3.9"
 
