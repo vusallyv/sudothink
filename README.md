@@ -1,4 +1,4 @@
-# TerminAI - Advanced AI Terminal Assistant
+# SudoThink - Advanced AI Terminal Assistant
 
 An intelligent terminal assistant that uses OpenAI's GPT-4 to help you with complex shell tasks, from simple commands to multi-step workflows.
 
@@ -61,25 +61,46 @@ ai-chat
 
 ## Installation
 
-1. **Clone the repository**:
+### Quick Install (Recommended)
+
+**One-liner installation:**
 ```bash
-git clone <repository-url>
-cd terminAI
+curl -fsSL https://raw.githubusercontent.com/yourusername/sudothink/main/install-oneline.sh | bash
 ```
 
-2. **Set up your OpenAI API key**:
+**Manual installation:**
+```bash
+git clone https://github.com/yourusername/sudothink.git
+cd sudothink
+chmod +x install.sh
+./install.sh
+```
+
+### Alternative Installation Methods
+
+#### Via pip (Python package)
+```bash
+pip install sudothink
+```
+
+#### Via Homebrew (macOS)
+```bash
+# Add to your tap first
+brew tap yourusername/sudothink
+brew install sudothink
+```
+
+### Setup
+
+1. **Set up your OpenAI API key**:
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
 
-3. **Install the shell functions**:
+2. **Add to your shell profile** (if not done automatically):
 ```bash
-source ai.zsh
-```
-
-4. **Add to your shell profile** (optional):
-```bash
-echo "source ~/path/to/terminAI/ai.zsh" >> ~/.zshrc
+echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## Usage Examples

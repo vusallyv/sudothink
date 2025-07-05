@@ -20,16 +20,16 @@ function ai() {
     # Handle different modes
     if [[ "$mode" == "plan" ]]; then
         echo "📋 Generating step-by-step plan..."
-        python3 ~/.ai-terminal-plugin/ai.py "$query" plan
+        python3 "$SUDOTHINK_DIR/ai.py" "$query" plan
         return $?
     elif [[ "$mode" == "explain" ]]; then
         echo "💡 Analyzing request..."
-        python3 ~/.ai-terminal-plugin/ai.py "$query" explain
+        python3 "$SUDOTHINK_DIR/ai.py" "$query" explain
         return $?
     fi
     
     # Default command mode
-    local command=$(python3 ~/.ai-terminal-plugin/ai.py "$query")
+    local command=$(python3 "$SUDOTHINK_DIR/ai.py" "$query")
     
     # Check if the command was successfully generated (not an error message)
     if [[ $? -ne 0 ]] || [[ "$command" == *"❌"* ]]; then
@@ -55,7 +55,7 @@ function ai() {
             if [[ "$retry_ans" == "y" || "$retry_ans" == "Y" ]]; then
                 # Create a new request with the original input and error message
                 retry_input="$query. The previous command failed with error: $error_output. Please provide a corrected command that works on this system."
-                corrected_command=$(python3 ~/.ai-terminal-plugin/ai.py "$retry_input")
+                corrected_command=$(python3 "$SUDOTHINK_DIR/ai.py" "$retry_input")
                 
                 # Check if the corrected command was successfully generated
                 if [[ $? -eq 0 ]] && [[ "$corrected_command" != *"❌"* ]]; then
