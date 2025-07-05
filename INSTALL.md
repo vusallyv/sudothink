@@ -52,10 +52,10 @@ Then manually set up shell integration:
 
 ```bash
 # Download shell script
-curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/ai.zsh -o ~/.terminai.zsh
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/ai.zsh -o ~/.sudothink.zsh
 
 # Add to your shell configuration
-echo 'source ~/.terminai.zsh' >> ~/.zshrc
+echo 'source ~/.sudothink.zsh' >> ~/.zshrc
 ```
 
 ### 4. Homebrew Installation (macOS)
@@ -97,9 +97,9 @@ chmod +x install.sh
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
-2. **Install TerminAI**:
+2. **Install sudothink**:
    ```bash
-   brew install vusallyv/terminai/terminai
+   brew install vusallyv/sudothink/sudothink
    ```
 
 ### Linux (Ubuntu/Debian)
@@ -110,9 +110,9 @@ chmod +x install.sh
    sudo apt install python3 python3-pip
    ```
 
-2. **Install TerminAI**:
+2. **Install sudothink**:
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/install-oneline.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install-oneline.sh | bash
    ```
 
 ### Linux (CentOS/RHEL/Fedora)
@@ -126,9 +126,9 @@ chmod +x install.sh
    sudo dnf install python3 python3-pip
    ```
 
-2. **Install TerminAI**:
+2. **Install sudothink**:
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/install-oneline.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install-oneline.sh | bash
    ```
 
 ### Windows (WSL)
@@ -138,9 +138,9 @@ chmod +x install.sh
    wsl --install
    ```
 
-2. **Install TerminAI in WSL**:
+2. **Install sudothink in WSL**:
    ```bash
-   curl -fsSL https://raw.githubusercontent.com/vusallyv/terminAI/main/install-oneline.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install-oneline.sh | bash
    ```
 
 ## Configuration
@@ -170,10 +170,10 @@ The installation script automatically configures your shell, but you can also do
 
 ```bash
 # For zsh
-echo 'source ~/.terminAI/ai.zsh' >> ~/.zshrc
+echo 'source ~/.sudothink/ai.zsh' >> ~/.zshrc
 
 # For bash
-echo 'source ~/.terminAI/ai.zsh' >> ~/.bashrc
+echo 'source ~/.sudothink/ai.zsh' >> ~/.bashrc
 ```
 
 ## Verification
@@ -227,32 +227,32 @@ source ~/.bashrc
 
 ### Uninstallation
 
-To uninstall TerminAI:
+To uninstall sudothink:
 
 ```bash
 # If installed via install script
-~/.terminAI/uninstall.sh
+~/.sudothink/uninstall.sh
 
 # If installed via pip
-pip uninstall terminai
+pip uninstall sudothink
 
 # If installed via Homebrew
-brew uninstall terminai
+brew uninstall sudothink
 ```
 
 ### Updating
 
-To update TerminAI:
+To update sudothink:
 
 ```bash
 # If installed via install script
-~/.terminAI/update.sh
+~/.sudothink/update.sh
 
 # If installed via pip
-pip install --upgrade terminai
+pip install --upgrade sudothink
 
 # If installed via Homebrew
-brew upgrade terminai
+brew upgrade sudothink
 ```
 
 ## Support
@@ -260,8 +260,8 @@ brew upgrade terminai
 If you encounter any issues:
 
 1. Check the [troubleshooting section](#troubleshooting)
-2. Search [existing issues](https://github.com/vusallyv/terminAI/issues)
-3. Create a [new issue](https://github.com/vusallyv/terminAI/issues/new)
+2. Search [existing issues](https://github.com/vusallyv/sudothink/issues)
+3. Create a [new issue](https://github.com/vusallyv/sudothink/issues/new)
 
 ## Contributing
 

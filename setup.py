@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Setup script for TerminAI
+Setup script for sudothink
 """
 
 from setuptools import setup, find_packages
