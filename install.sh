@@ -96,6 +96,44 @@ install_python_deps() {
         print_error "Failed to install Python dependencies."
         exit 1
     fi
+    
+    # Install the sudothink package in development mode
+    print_status "Installing SudoThink package..."
+    
+    # Create a temporary setup.py in the installation directory
+    cat > "$INSTALL_DIR/setup.py" << 'EOF'
+#!/usr/bin/env python3
+from setuptools import setup, find_packages
+import os
+
+setup(
+    name="sudothink",
+    version="1.0.0",
+    description="An intelligent terminal assistant",
+    packages=find_packages(),
+    install_requires=["openai", "requests"],
+    python_requires=">=3.7",
+)
+EOF
+
+    # Create the sudothink package directory
+    mkdir -p "$INSTALL_DIR/sudothink"
+    
+    # Download the package files
+    curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/sudothink/__init__.py -o "$INSTALL_DIR/sudothink/__init__.py"
+    curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/sudothink/assistant.py -o "$INSTALL_DIR/sudothink/assistant.py"
+    curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/sudothink/cli.py -o "$INSTALL_DIR/sudothink/cli.py"
+    
+    # Install the package in development mode
+    cd "$INSTALL_DIR"
+    python3 -m pip install --user -e .
+    
+    if [ $? -eq 0 ]; then
+        print_status "SudoThink package installed successfully ✓"
+    else
+        print_error "Failed to install SudoThink package."
+        exit 1
+    fi
 }
 
 # Function to create installation directory
@@ -364,8 +402,8 @@ main() {
     
     detect_shell
     check_dependencies
-    install_python_deps
     create_install_dir
+    install_python_deps
     copy_files
     setup_shell_config
     create_uninstall_script
