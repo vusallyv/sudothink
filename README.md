@@ -65,7 +65,7 @@ ai-chat
 
 **One-liner installation:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/install-oneline.sh | bash
+curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/install-oneline.sh | bash
 ```
 
 **Manual installation:**

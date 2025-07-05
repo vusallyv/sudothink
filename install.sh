@@ -121,19 +121,17 @@ create_install_dir() {
 copy_files() {
     print_status "Copying files..."
     
-    # Copy the main script
-    cp ai.py "$INSTALL_DIR/"
+    # Download files from repository
+    curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/ai.py -o "$INSTALL_DIR/ai.py"
     chmod +x "$INSTALL_DIR/ai.py"
     
-    # Copy the shell script
-    cp ai.zsh "$INSTALL_DIR/"
+    curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/ai.zsh -o "$INSTALL_DIR/ai.zsh"
     
-    # Copy README
-    cp README.md "$INSTALL_DIR/"
+    curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/README.md -o "$INSTALL_DIR/README.md"
     
-    # Copy LICENSE if it exists
-    if [[ -f "LICENSE" ]]; then
-        cp LICENSE "$INSTALL_DIR/"
+    # Download LICENSE if it exists
+    if curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/master/LICENSE -o "$INSTALL_DIR/LICENSE" 2>/dev/null; then
+        print_status "LICENSE downloaded"
     fi
     
     print_status "Files copied successfully ✓"
