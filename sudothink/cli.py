@@ -4,13 +4,34 @@ Command-line interface for SudoThink
 """
 
 import sys
+import argparse
 from .assistant import AITerminalAssistant
+from .setup import main as setup_main
 
 def main():
     """Main CLI entry point"""
+    # Check for setup command
+    if len(sys.argv) > 1 and sys.argv[1] == "setup":
+        # Remove 'setup' from argv and pass to setup module
+        sys.argv.pop(1)
+        setup_main()
+        return
+    
+    # Check for help on setup
+    if len(sys.argv) > 1 and sys.argv[1] in ["--help", "-h"]:
+        print("SudoThink - AI Terminal Assistant")
+        print("\nUsage:")
+        print("  sudothink <query> [mode]     - Generate command or plan")
+        print("  sudothink setup              - Configure API key")
+        print("  sudothink setup --status     - Show configuration status")
+        print("  sudothink setup --remove     - Remove stored API key")
+        print("\nModes: command (default), plan, explain")
+        return
+    
     if len(sys.argv) < 2:
         print("❌ Usage: sudothink <query> [mode]")
         print("Modes: command (default), plan, explain")
+        print("Run 'sudothink setup' to configure your API key")
         sys.exit(1)
     
     query = " ".join(sys.argv[1:-1]) if len(sys.argv) > 2 else " ".join(sys.argv[1:])

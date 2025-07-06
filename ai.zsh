@@ -1,8 +1,14 @@
 function ai() {
-    # Check if OpenAI API key is set
-    if [[ -z "$OPENAI_API_KEY" ]]; then
-        echo "❌ OPENAI_API_KEY not set."
-        return 1
+    # Check for setup command
+    if [[ "$1" == "setup" ]]; then
+        python3 "$SUDOTHINK_DIR/ai.py" setup "${@:2}"
+        return $?
+    fi
+    
+    # Check for help
+    if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+        python3 "$SUDOTHINK_DIR/ai.py" --help
+        return $?
     fi
     
     # Parse arguments for mode
@@ -88,6 +94,10 @@ function ai-explain() {
     ai "$*" explain
 }
 
+function ai-setup() {
+    ai setup "$*"
+}
+
 # Interactive mode for complex conversations
 function ai-chat() {
     echo "💬 AI Terminal Chat Mode"
@@ -104,8 +114,12 @@ function ai-chat() {
             echo "Available commands:"
             echo "  exit - Exit chat mode"
             echo "  help - Show this help"
+            echo "  setup - Configure API key"
             echo "  plan <task> - Generate a plan for a task"
             echo "  explain <task> - Explain a task"
+            continue
+        elif [[ "$user_input" == "setup" ]]; then
+            ai-setup
             continue
         elif [[ "$user_input" =~ ^plan\ (.+)$ ]]; then
             ai-plan "${BASH_REMATCH[1]}"

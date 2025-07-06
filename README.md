@@ -96,15 +96,34 @@ brew install sudothink
 
 ### Setup
 
-1. **Set up your OpenAI API key**:
+#### Option 1: One-time Configuration (Recommended)
+Configure your API key once and it will be remembered:
+
+```bash
+ai setup
+```
+
+This will prompt you to enter your OpenAI API key securely. The key will be stored in `~/.sudothink/config.json` with restricted permissions.
+
+#### Option 2: Environment Variable (Traditional)
+Set up your OpenAI API key as an environment variable:
+
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
 
-2. **Add to your shell profile** (if not done automatically):
+**Add to your shell profile** (if not done automatically):
 ```bash
 echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.zshrc
 source ~/.zshrc
+```
+
+#### Setup Commands
+```bash
+ai setup                    # Configure API key (interactive)
+ai setup --api-key "sk-..." # Configure API key (non-interactive)
+ai setup --status          # Check configuration status
+ai setup --remove          # Remove stored API key
 ```
 
 ## Usage Examples
@@ -163,6 +182,7 @@ ai-chat
 - `AI_TRUST_MODE`: Set to "true" to run commands without confirmation (use with caution)
 
 ### Files Created
+- `~/.sudothink/config.json`: API key and configuration (secure, owner-only permissions)
 - `~/.ai-terminal-context.json`: Persistent context and settings
 - `~/.ai-terminal-history.log`: Interaction history for learning
 
@@ -213,8 +233,12 @@ The modular design makes it easy to add new modes:
 
 ### Common Issues
 
-**"OPENAI_API_KEY not set"**
+**"OpenAI API key not configured"**
 ```bash
+# Option 1: One-time setup (recommended)
+ai setup
+
+# Option 2: Set environment variable
 export OPENAI_API_KEY="your-key-here"
 ```
 

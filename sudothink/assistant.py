@@ -6,12 +6,16 @@ import json
 import platform
 from datetime import datetime
 from openai import OpenAI, AuthenticationError
+from .config import Config
 
 class AITerminalAssistant:
     def __init__(self):
-        self.api_key = os.getenv("OPENAI_API_KEY")
+        self.config = Config()
+        self.api_key = self.config.get_api_key()
+        
         if not self.api_key:
-            print("❌ OPENAI_API_KEY not set. Please export it.")
+            print("❌ OpenAI API key not configured.")
+            print("💡 Run 'ai-setup' to configure your API key once, or set OPENAI_API_KEY environment variable.")
             sys.exit(1)
         
         self.client = OpenAI(api_key=self.api_key)
