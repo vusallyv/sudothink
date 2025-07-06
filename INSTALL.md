@@ -58,17 +58,7 @@ curl -fsSL https://raw.githubusercontent.com/vusallyv/sudothink/main/ai.zsh -o ~
 echo 'source ~/.sudothink.zsh' >> ~/.zshrc
 ```
 
-### 4. Homebrew Installation (macOS)
-
-```bash
-# Add the tap
-brew tap yourusername/sudothink
-
-# Install SudoThink
-brew install sudothink
-```
-
-### 5. Development Installation
+### 4. Development Installation
 
 For developers who want to contribute:
 
@@ -95,11 +85,6 @@ chmod +x install.sh
 1. **Install Homebrew** (if not already installed):
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   ```
-
-2. **Install sudothink**:
-   ```bash
-   brew install vusallyv/sudothink/sudothink
    ```
 
 ### Linux (Ubuntu/Debian)
@@ -236,8 +221,6 @@ To uninstall sudothink:
 # If installed via pip
 pip uninstall sudothink
 
-# If installed via Homebrew
-brew uninstall sudothink
 ```
 
 ### Updating
@@ -251,8 +234,6 @@ To update sudothink:
 # If installed via pip
 pip install --upgrade sudothink
 
-# If installed via Homebrew
-brew upgrade sudothink
 ```
 
 ## Support
