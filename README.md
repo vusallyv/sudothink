@@ -85,15 +85,6 @@ pip install sudothink
 
 **Note:** The pip package will be available after publishing to PyPI. For now, use the one-liner or manual installation methods.
 
-#### Via Homebrew (macOS)
-```bash
-# Add to your tap first
-brew tap yourusername/sudothink
-brew install sudothink
-```
-
-**Note:** Homebrew installation requires the tap to be published first. For now, use the one-liner or manual installation methods.
-
 ### Setup
 
 #### Option 1: One-time Configuration (Recommended)
