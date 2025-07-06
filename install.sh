@@ -108,7 +108,7 @@ import os
 
 setup(
     name="sudothink",
-    version="1.0.3",
+    version="1.0.4",
     description="An intelligent terminal assistant",
     packages=find_packages(),
     install_requires=["openai", "requests"],
